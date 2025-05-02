@@ -22,7 +22,7 @@ def preprocess_train(dataset_filepath, test_size, random_state):
     pickle.dump(cv, open(bow_path, "wb"))
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
-    return [X_train, X_test, y_train, y_test]
+    return X_train, X_test, y_train, y_test
 
 
 def preprocess_inference(dataset_filepath, pickle_file):
