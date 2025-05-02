@@ -18,7 +18,7 @@ def preprocess_train(dataset_filepath, test_size, random_state):
     X = cv.fit_transform(corpus).toarray()
     y = dataset.iloc[:, -1].values
 
-    bow_path = 'c1_BoW_Sentiment_Model.pkl'
+    bow_path = '../c1_BoW_Sentiment_Model.pkl'
     pickle.dump(cv, open(bow_path, "wb"))
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
