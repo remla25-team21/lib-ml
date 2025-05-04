@@ -10,7 +10,7 @@ import pickle
 
 
 # Model Training
-def preprocess_train(dataset_filepath, test_size, random_state):
+def preprocess_train(dataset_filepath, test_size, random_state, vectorizer_output="c1_BoW_Sentiment_Model.pkl"):
     dataset = pd.read_csv(dataset_filepath, delimiter='\t', quoting=3)
     corpus = clean(dataset)
     cv = CountVectorizer(max_features=1420)
@@ -18,8 +18,7 @@ def preprocess_train(dataset_filepath, test_size, random_state):
     X = cv.fit_transform(corpus).toarray()
     y = dataset.iloc[:, -1].values
 
-    bow_path = '../c1_BoW_Sentiment_Model.pkl'
-    pickle.dump(cv, open(bow_path, "wb"))
+    pickle.dump(cv, open(vectorizer_output, "wb"))
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
     return X_train, X_test, y_train, y_test
