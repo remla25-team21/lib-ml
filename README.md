@@ -5,10 +5,10 @@ A machine learning library for REMLA project that provides text preprocessing fu
 ## Installation
 
 ```bash
-pip install git+https://github.com/remla25-team21/lib-ml.git@v1.0.0
+pip install git+https://github.com/remla25-team21/lib-ml.git@vX.Y.Z
 ```
 
-Check for the latest release version.
+Check the latest release version [here](https://github.com/remla25-team21/lib-ml/releases), and replace `X.Y.Z` with the latest version.
 
 ## Usage
 
