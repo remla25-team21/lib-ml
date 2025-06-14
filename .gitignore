@@ -1,0 +1,10 @@
+# Python Library Build
+build/
+dist/
+*.egg-info/
+
+# Python Library Development
+.venv/
+.pytest_cache/
+.ruff_cache/
+.vscode/
